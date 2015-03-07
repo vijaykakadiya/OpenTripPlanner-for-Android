@@ -4125,18 +4125,18 @@ public class MainFragment extends Fragment implements
         String delayText = ConversionUtils.getFormattedDurationTextNoSeconds(delay, longFormat, mApplicationContext);
         if (delay == 0){
             delayText = getResources()
-                    .getString(R.string.map_markers_warning_live_upates_on_time);
+                    .getString(R.string.map_markers_warning_live_updates_on_time);
         }
         else if (delay > 0) {
             delayText += " "
                     + getResources()
-                    .getString(R.string.map_markers_warning_live_upates_late_arrival);
+                    .getString(R.string.map_markers_warning_live_updates_late_arrival);
         }
         else {
             delayText = delayText.replace("-","");
             delayText += " "
                     + getResources()
-                    .getString(R.string.map_markers_warning_live_upates_early_arrival);
+                    .getString(R.string.map_markers_warning_live_updates_early_arrival);
         }
         return delayText;
     }

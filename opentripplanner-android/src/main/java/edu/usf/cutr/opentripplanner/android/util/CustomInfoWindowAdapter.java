@@ -72,20 +72,20 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter{
                 int color = ConversionUtils.getDelayColor(delayInSeconds, context);
                 String delayText = "\u25cf";
                 if (delayInSeconds == 0) {
-                    delayText += context.getString(R.string.map_markers_warning_live_upates_on_time);
+                    delayText += context.getString(R.string.map_markers_warning_live_updates_on_time);
                 }
                 else if (delayInSeconds > 0) {
                     delayText += " " + delay + " "
                             + context
                                 .getResources()
-                                .getString(R.string.map_markers_warning_live_upates_late_arrival);
+                                .getString(R.string.map_markers_warning_live_updates_late_arrival);
                 }
                 else {
                     String positiveDelay = delay.replace("-","");
                     delayText += " " + positiveDelay + " "
                             + context
                                 .getResources()
-                                .getString(R.string.map_markers_warning_live_upates_early_arrival);
+                                .getString(R.string.map_markers_warning_live_updates_early_arrival);
                 }
                 SpannableString delayFullText = new SpannableString(delayText);
                 delayFullText.setSpan(new ForegroundColorSpan(color), 0, delayText.length(), 0);
